@@ -1,0 +1,115 @@
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: calc(100vh - 8em);
+    padding: 4em;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color :#121212;
+}
+
+/* BACK BUTTON */
+
+.menu-btn {
+    position: fixed;
+    right: 20px;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 3px solid #fff;
+}
+
+.menu-btn-burger {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn-burger::before {
+    transform: translateY(16px);
+}
+
+/*Animation*/
+
+.main-text {
+    position: relative;
+    top: 40%;
+    width: 16em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(-50%);
+}
+
+.about-text {
+    position: relative;
+    top: 45%;
+    width: 16em;
+    margin: 0 auto;
+    font-size: 150%;
+    text-align: center;
+}
+
+.typewriter {
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+          width: 0;
+    }
+    to {
+          width: 16em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+          border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+          border-right-color: transparent;
+    }
+}
+
+/* BURGER BAR ANIMATIONS */
+
+.menu-btn.open .menu-btn-burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
